@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SakuraGo</title>
+</head>
+<body>
+    <header id="top">
+        <h1>SakuraGo</h1>
+        <p><em>Ride in full bloom.</em></p>
+        <nav>
+            <a href="#book">Book a Ride</a> | 
+            <a href="#fleet">Our Vehicles</a> | 
+            <a href="#map">Map</a> | 
+            <a href="#media">Media</a> | 
+            <a href="#schedule">Schedule</a> | 
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <hr>
+
+    <main>
+        <!-- Step 2: Booking Form -->
+        <section id="book">
+            <h2>Book a Ride</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Trip Details</legend>
+
+                    <p>
+                        <label for="fullname">Full name:</label><br>
+                        <input type="text" id="fullname" name="fullname" placeholder="Juan Dela Cruz" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone number:</label><br>
+                        <input type="tel" id="phone" name="phone" placeholder="09XX XXX XXXX" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="you@example.com">
+                    </p>
+
+                    <p>
+                        <label for="pickup">Pick-up location:</label><br>
+                        <input type="text" id="pickup" name="pickup" list="places" placeholder="Enter pick-up point">
+                    </p>
+
+                    <p>
+                        <label for="dropoff">Drop-off location:</label><br>
+                        <input type="text" id="dropoff" name="dropoff" list="places" placeholder="Enter drop-off point">
+                    </p>
+
+                    <datalist id="places">
+                        <option value="Central Terminal">
+                        <option value="City Hall">
+                        <option value="Airport">
+                        <option value="University Campus">
+                        <option value="Public Market">
+                    </datalist>
+
+                    <p>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                    </p>
+
+                    <p>
+                        <label for="passengers">Passengers (1–10):</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+                    </p>
+
+                    <p>
+                        <label for="vehicle">Vehicle type:</label>
+                        <select id="vehicle" name="vehicle">
+                            <option value="taxi">Taxi</option>
+                            <option value="van">Van</option>
+                            <option value="shuttle">Shuttle Bus</option>
+                            <option value="motorcycle">Motorcycle Taxi</option>
+                            <option value="tricycle">Tricycle</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        Payment method:<br>
+                        <input type="radio" id="cash" name="payment" value="cash" checked>
+                        <label for="cash">Cash</label>
+                        <input type="radio" id="card" name="payment" value="card">
+                        <label for="card">Card</label>
+                        <input type="radio" id="ewallet" name="payment" value="ewallet">
+                        <label for="ewallet">E-Wallet</label>
+                    </p>
+
+                    <p>
+                        Extras:<br>
+                        <input type="checkbox" id="luggage" name="extras" value="luggage">
+                        <label for="luggage">Extra luggage</label><br>
+                        <input type="checkbox" id="childseat" name="extras" value="childseat">
+                        <label for="childseat">Child seat</label><br>
+                        <input type="checkbox" id="wheelchair" name="extras" value="wheelchair">
+                        <label for="wheelchair">Wheelchair accessible</label>
+                    </p>
+
+                    <p>
+                        <label for="notes">Notes for the driver:</label><br>
+                        <textarea id="notes" name="notes" rows="4" cols="40" placeholder="landmarks, special instructions..."></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#terms-info">Terms &amp; Conditions</a></label>
+                    </p>
+
+                    <p>
+                        <button type="submit">Book Now</button>
+                        <button type="reset">Clear</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+        <hr>
+
+        <!-- Step 3: Vehicle Images -->
+        <section id="fleet">
+            <h2>Our Vehicles</h2>
+
+            <figure>
+                <img src="taxi.jpg" alt="SakuraGo taxi" width="400" height="250">
+                <figcaption><strong>Taxi</strong> – Fast and comfortable for up to 4 passengers.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="van.jpg" alt="SakuraGo van" width="400" height="250">
+                <figcaption><strong>Van</strong> – Ideal for families and groups of up to 10.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="shuttle bus.jpg" alt="SakuraGo shuttle bus" width="400" height="250">
+                <figcaption><strong>Shuttle Bus</strong> – Affordable fixed-route transport.</figcaption>
+            </figure>
+
+            <p><small>Tip: replace the placeholder image links with your own photos, e.g. images/taxi.jpg.</small></p>
+        </section>
+        <hr>
+
+        <!-- Step 4: Map -->
+        <section id="map">
+            <h2>Find Our Stops</h2>
+            <p>Map of our main terminal in Baguio City:</p>
+
+            <p>
+                <a href="https://www.google.com/maps?q=16.4023,120.5960" target="_blank" rel="noopener">
+                    View on Google Maps
+                </a>
+            </p>
+        </section>
+        <hr>
+
+        <!-- Step 5: Video and Audio -->
+        <section id="media">
+            <h2>Media</h2>
+
+            <h3>How SakuraGo Works (Video)</h3>
+            <video width="480" controls poster="howitworks.mp4">
+                <source src="howitworks.mp4" type="video/mp4">
+                <source src="howitworks.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+
+            <h3>Driver Announcement</h3>
+            <audio controls>
+                <source src="ttsmaker-file-2026-10-8-14-55-43.mp3" type="audio/mpeg">
+                <source src="ttsmaker-file-2026-10-8-14-55-43.mp3" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Watch on YouTube (Embedded)</h3>
+            <iframe
+                width="480"
+                height="270"
+                src="Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster).mp4"
+                title="Video"
+                allowfullscreen>
+            </iframe>
+        </section>
+        <hr>
+
+        <!-- Step 6: Schedule Table and Route Form -->
+        <section id="schedule">
+            <h2>Shuttle Schedule</h2>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption>Daily departures from SakuraGo Terminal</caption>
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Terminal → Burnham Park</td>
+                        <td>6:00 AM</td>
+                        <td>6:30 AM</td>
+                        <td>₱20</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal → Stone Kingdom</td>
+                        <td>7:00 AM</td>
+                        <td>7:40 AM</td>
+                        <td>₱75</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal → Minesview Park</td>
+                        <td>9:00 AM</td>
+                        <td>10:00 AM</td>
+                        <td>₱120</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal → Botanical Garden</td>
+                        <td>1:00 PM</td>
+                        <td>1:25 PM</td>
+                        <td>₱100</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Check Your Route</h3>
+            <form action="#" method="get">
+                <p>
+                    <label for="route">Choose a route:</label>
+                    <select id="route" name="route">
+                        <option value="cityhall">Terminal → City Hall</option>
+                        <option value="university">Terminal → University</option>
+                        <option value="airport">Terminal → Airport</option>
+                        <option value="market">Terminal → Public Market</option>
+                    </select>
+                    <button type="submit">Search</button>
+                </p>
+            </form>
+        </section>
+        <hr>
+
+        <!-- Step 7: Contact and Feedback -->
+        <section id="contact">
+            <h2>Contact &amp; Feedback</h2>
+
+            <form action="#" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Send Feedback</legend>
+
+                    <p>
+                        <label for="fb-name">Your name:</label><br>
+                        <input type="text" id="fb-name" name="fb-name" required>
+                    </p>
+
+                    <p>
+                        <label for="rating">Rate your ride (1–5):</label>
+                        <input type="range" id="rating" name="rating" min="1" max="5" value="5">
+                    </p>
+
+                    <p>
+                        <label for="topic">Topic:</label>
+                        <select id="topic" name="topic">
+                            <option value="compliment">Compliment</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="lost">Lost item</option>
+                            <option value="suggestion">Suggestion</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+                    </p>
+
+                    <p>
+                        <label for="photo">Attach a photo (optional):</label><br>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </p>
+
+                    <p>
+                        <button type="submit">Send Feedback</button>
+                    </p>
+                </fieldset>
+            </form>
+
+            <h3>Reach Us</h3>
+            <address>
+                SakuraGo Transport Co.<br>
+                123 Session Road, Baguio City, Philippines<br>
+                Phone: <a href="tel:+63744234567">+63 74 123 4567</a><br>
+                Email: <a href="mailto:support@sakurago.example">support@sakurago.example</a>
+            </address>
+        </section>
+        <hr>
+
+        <!-- Step 8: Useful Links -->
+        <section id="links">
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a></li>
+                <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Our Facebook Page</a></li>
+                <li><a href="#top">Back to top</a></li>
+            </ul>
+        </section>
+
+        <!-- Terms & Conditions -->
+        <section id="terms-info">
+            <h2>Terms &amp; Conditions</h2>
+            <details>
+                <summary>Read the terms</summary>
+                <ol>
+                    <li>Passengers must wear seat belts at all times.</li>
+                    <li>No smoking, eating, or drinking of alcoholic beverages inside the vehicle.</li>
+                    <li>Cancellation of booked rides must be done at least 30 minutes before the scheduled pick-up time.</li>
+                    <li>SakuraGo reserves the right to refuse service to passengers who violate safety rules.</li>
+                </ol>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 SakuraGo Transport Co. All rights reserved.</p>
+    </footer>
+</body>
+</html>
